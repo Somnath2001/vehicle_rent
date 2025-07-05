@@ -5,8 +5,8 @@ exports.getVehicles = async (req, res) => {
   const { type } = req.params;
 
   try {
-    const vehicles = await Vehicle.find({ type });
-    // const vehicles = await Vehicle.find();
+    // const vehicles = await Vehicle.find({ type });
+    const vehicles = await Vehicle.find();
     res.json(vehicles);
   } catch (error) {
     console.error("Error getting vehicles:", error);
