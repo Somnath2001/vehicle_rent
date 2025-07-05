@@ -72,7 +72,7 @@ export default function BookingForm() {
   const handleSubmit = () => {
     setSuccess(false);
     axios
-      .post("http://localhost:8080/bookings", formData)
+      .post(`${process.env.REACT_APP_API_URL}/bookings`, formData)
       .then((response) => {
         console.log(response);
         if (response.data) {

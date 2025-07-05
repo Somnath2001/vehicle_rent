@@ -8,7 +8,7 @@ export default function VehicleTypeStep(props) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/vehicles`)
+      .get(`${process.env.REACT_APP_API_URL}/vehicles`)
       .then((res) => {
         setTypes(res.data);
       })
