@@ -9,7 +9,7 @@ const {
 
 router.get("/vehicles", getVehicles);
 
-// router.get("/vehicles/:type", getVehicles);
+router.get("/vehicles/:type", getVehicles);
 
 router.post("/bookings", createBookings);
 
